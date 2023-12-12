@@ -16,13 +16,78 @@
     <title>Frontend Mentor | Interactive card details form</title>
   </head>
   <body>
-    0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
-    Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
-    e.g. 123 Confirm
+    <div class="card-back">
+      <div class="back-number">000</div>
+    </div>
+    <div class="card-front">
+      <div class="cirles">
+        <div class="big-circle"></div>
+        <div class="small-circle"></div>
+      </div>
+
+      <div class="card-detalis">
+        <div class="front-number">0000 0000 0000 0000</div>
+        <div class="card-name">
+          <div class="name">Jane Appleseed</div>
+          <div class="date">
+            <span class="mm">00</span> / <span class="yy"></span>00
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form">
+      <div class="card-holder-name">
+        Cardholder Name
+        <input
+          type="text"
+          class="card-holder-name-input"
+          placeholder="e.g. Jane Appleseed"
+        />
+      </div>
+
+      <div class="card-number">
+        Card Number
+        <input
+          type="text"
+          class="card-number-input"
+          placeholder="e.g. 1234 5678 9123 0000"
+        />
+        <div class="num-error">Wrong format, numbers only</div>
+      </div>
+
+      <div class="cvc">
+        <div class="labels">
+          <p>EXP. DATE (MM/YY)</p>
+          <p>CVC</p>
+        </div>
+
+        <div class="inputs">
+          <input type="number" class="month" placeholder="MM" />
+          <input type="number" class="year" placeholder="YY" />
+          <input type="number" class="cvc-input" placeholder="e.g. 123" />
+        </div>
+
+        <div class="error">
+          <div class="month-year-error">Can't be blank</div>
+          <div class="cvc-error">Can't be blank</div>
+        </div>
+
+        <div class="button">Confirm</div>
+      </div>
+    </div>
 
     <!-- Completed state start -->
 
-    Thank you! We've added your card details Continue
+    <div class="form-completed">
+      <div class="icon">
+        <img src="./images/icon-complete.svg" alt="complete" />
+        <div class="thanks">Thank you!</div>
+        <div class="added">We've added your card details</div>
+        <div class="continue">Continue</div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
