@@ -23,12 +23,12 @@ let continueBtn = document.querySelector(".continue");
 let formCompleted = document.querySelector(".icon");
 
 let cardNameFunction = function () {
-  if (inputs[0].value.match(/^[A-Za-z]+$/)) {
+  if (inputs[0].value.match(/^[A-Za-z ]+$/)) {
     cardName.innerHTML = cardHolderName.value;
     inputs[0].style.borderColor = "hsl(270, 3%, 87%)";
     return true;
   } else cardName.innerHTML;
-  inputs[0].style.borderColor = "red";
+  inputs[0].style.borderColor = "hsl(0, 100%, 66%)";
   return false;
 };
 
@@ -39,7 +39,7 @@ let cardNumberFunction = function () {
     numberError.style.display = "none";
     return true;
   } else frontNumber.innerHTML;
-  inputs[1].style.borderColor = "red";
+  inputs[1].style.borderColor = "hsl(0, 100%, 66%)";
   numberError.style.display = "flex";
   return false;
 };
@@ -51,7 +51,7 @@ let monthFunction = function () {
     dateError.style.display = "none";
     return true;
   } else monthCard.innerHTML;
-  inputs[2].style.borderColor = "red";
+  inputs[2].style.borderColor = "hsl(0, 100%, 66%)";
   dateError.style.display = "flex";
   return false;
 };
@@ -63,7 +63,7 @@ let yearFunction = function () {
     dateError.style.display = "none";
     return true;
   } else yearCard.innerHTML;
-  inputs[3].style.borderColor = "red";
+  inputs[3].style.borderColor = "hsl(0, 100%, 66%)";
   dateError.style.display = "flex";
   return false;
 };
@@ -75,7 +75,7 @@ let cvcFunction = function () {
     cvcError.style.display = "none";
     return true;
   } else backNumber.innerHTML;
-  inputs[4].style.borderColor = "red";
+  inputs[4].style.borderColor = "hsl(0, 100%, 66%)";
   cvcError.style.display = "flex";
   return false;
 };
