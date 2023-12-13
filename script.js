@@ -52,7 +52,7 @@ let monthFunction = function () {
     return true;
   } else monthCard.innerHTML;
   inputs[2].style.borderColor = "hsl(0, 100%, 66%)";
-  dateError.style.display = "flex";
+  dateError.style.display = "block";
   return false;
 };
 
@@ -64,7 +64,7 @@ let yearFunction = function () {
     return true;
   } else yearCard.innerHTML;
   inputs[3].style.borderColor = "hsl(0, 100%, 66%)";
-  dateError.style.display = "flex";
+  dateError.style.display = "block";
   return false;
 };
 
@@ -76,19 +76,38 @@ let cvcFunction = function () {
     return true;
   } else backNumber.innerHTML;
   inputs[4].style.borderColor = "hsl(0, 100%, 66%)";
-  cvcError.style.display = "flex";
+  cvcError.style.display = "block";
   return false;
 };
 
 button.addEventListener("click", function () {
-  cardNameFunction();
-  cardNumberFunction();
-  monthFunction();
-  yearFunction();
-  cvcFunction();
+  if (
+    cardNameFunction() === true &&
+    cardNumberFunction() === true &&
+    monthFunction() === true &&
+    yearFunction() === true &&
+    cvcFunction() === true
+  ) {
+    cardNameFunction();
+    cardNumberFunction();
+    monthFunction();
+    yearFunction();
+    cvcFunction();
+
+    form.style.display = "none";
+    formCompleted.style.display = "block";
+  } else {
+    cardNameFunction();
+    cardNumberFunction();
+    monthFunction();
+    yearFunction();
+    cvcFunction();
+  }
 });
 
 continueBtn.addEventListener("click", function () {
+  form.style.display = "flex";
+  formCompleted.style.display = "none";
   cardHolderName.value = "";
   cardHolderNumber.value = "";
   month.value = "";

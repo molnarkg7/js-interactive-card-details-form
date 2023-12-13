@@ -191,7 +191,7 @@ body {
 .cvc-error {
   position: absolute;
   top: 0;
-  right: 35px;
+  right: 30px;
   display: none;
 }
 
@@ -221,7 +221,6 @@ body {
 .thanks {
   font-size: 25px;
   color: hsl(278, 68%, 11%);
-  margin-top: 400px;
 }
 .added {
   font-size: 18px;
@@ -242,7 +241,7 @@ body {
   border-radius: 10px;
 }
 
-@media screen and (min-width: 380px) {
+@media only screen and (min-width: 500px) {
   body {
     background-image: url("images/bg-main-desktop.png");
     background-position: left;
@@ -261,11 +260,11 @@ body {
   }
 
   .card-front {
-    top: 0px;
-    left: 250px;
+    top: -80px;
+    left: 150px;
     width: 450px;
     height: 250px;
-    margin-top: 30px;
+    padding-top: 30px;
   }
 
   .cirles {
@@ -299,7 +298,7 @@ body {
   .form,
   .form-completed {
     align-items: flex-end;
-    padding-right: 400px;
+    padding-right: 300px;
     position: relative;
     bottom: 250px;
   }
@@ -322,6 +321,13 @@ body {
   .inputs .cvc-input {
     width: 190px;
     padding-left: 20px;
+  }
+
+  .cvc-error {
+    position: absolute;
+    top: 0;
+    right: 125px;
+    display: none;
   }
 
   .button,
